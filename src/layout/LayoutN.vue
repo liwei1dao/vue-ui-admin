@@ -1,9 +1,10 @@
 <template>
     <v-app>
         <v-main>
-            <div class="topbar">
+            <v-row justify="start" class="topbar">
+                <v-spacer></v-spacer>
                 <SelectLanguge/>
-            </div>
+            </v-row>
             <v-container
             class="fill-height"
             fluid
@@ -39,8 +40,6 @@ export default {
 <style>
     .topbar{
         width: 100%;
-        text-align: end;
-        line-height:48px;
-        vertical-align: middle;
+        padding: 10px;
     }
 </style>

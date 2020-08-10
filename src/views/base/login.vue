@@ -29,8 +29,8 @@
         </v-card-text>
         <v-card-actions>
             <v-spacer></v-spacer>
-            <v-btn color="blue-grey">Login</v-btn>
-            <v-btn color="primary">Login</v-btn>
+            <v-btn color="blue-grey">{{$t('common.login')}}</v-btn>
+            <v-btn color="primary">{{$t('common.login')}}</v-btn>
         </v-card-actions>
     </v-card>
 </template>
