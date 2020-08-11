@@ -1,23 +1,20 @@
 <template>
-    <div>
+    <div class="menu-butt">
        <v-menu
-        v-model="menu"
-        :close-on-content-click="false"
-        :nudge-width="200"
-        offset-x
-        offset-y
+            v-model="menu"
+            :close-on-content-click="false"
+            :nudge-width="200"
+            offset-x
+            offset-y
+            transition="scroll-x-transition"
         >
         <template v-slot:activator="{ on, attrs }">
-            <div class="menu-butt">
-                <img
-                    class="avatar-butt"
-                    v-bind="attrs"
-                    v-on="on"
-                    :src="userinfo.headurl"
-                    alt="John"
-                >
-            </div>
-            
+            <img
+                class="avatar-butt"
+                v-bind="attrs"
+                v-on="on"
+                :src="userinfo.headurl"
+            >
         </template>
 
         <v-card>
@@ -86,20 +83,18 @@ export default {
             )
         }
     },
-
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
     .menu-butt{
-      width: 56px;
-      height: 48px;
-      padding-right: 8px;
+        width: 54px;
+        height: 46px;
     }
     .avatar-butt{
-        width: 48px;
-        height: 48px;
-        border-radius:48px;
+        width: 46px;
+        height: 46px;
+        border-radius:100%;
     }
 
 </style>

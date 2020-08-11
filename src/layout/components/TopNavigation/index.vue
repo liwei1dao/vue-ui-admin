@@ -1,6 +1,6 @@
 <template>
     <div>
-        <v-tabs v-model="tabchange" background-color="transparent" centered dark icons-and-text>
+        <v-tabs v-model="tabchange" background-color="transparent" centered icons-and-text>
             <v-tabs-slider></v-tabs-slider>
             <v-tab v-for="route in routes" :key="route.path">
                 {{route.meta.title}}

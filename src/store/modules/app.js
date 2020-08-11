@@ -1,7 +1,7 @@
 import Cookies from 'js-cookie'
 
 const state = {
-    appName:"Lego",
+    appname:"Lego",
     currlanguage:Cookies.get('language')||'zh',
 }
  

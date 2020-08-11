@@ -1,14 +1,13 @@
 <template>
+  <div class="menu-butt">
     <v-menu offset-y transition="scroll-x-transition">
       <template v-slot:activator="{ on, attrs }">
-        <div class="menu-butt">
-            <img
-                class="slang-icon"
-                :class="flagIconClass(currlanguage,true)"
-                v-bind="attrs"
-                v-on="on"
-            >
-        </div>
+          <img
+              class="slang-icon"
+              :class="flagIconClass(currlanguage,true)"
+              v-bind="attrs"
+              v-on="on"
+          >
       </template>
       <v-card>
         <v-toolbar
@@ -29,6 +28,7 @@
         </v-list>
       </v-card>
     </v-menu>
+  </div>
 </template>
 
 <script>
@@ -67,16 +67,15 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
     .menu-butt{
-        background-color:"#E0E0E0";
-        width: 48px;
+        width: 60px;
         height: 48px;
-        padding-right: 8px;
     }
     .slang-icon{
-        width: 40px;
-        height: 40px;
-        border-radius:40px;
+        width: 48px;
+        height: 48px;
+        border-radius:100%;
+        border:6px solid #BDBDBD;
     }
 </style>

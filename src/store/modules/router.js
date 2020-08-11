@@ -22,13 +22,15 @@ export function filterAsyncRoutes(routes) {
  * @param roles
  */
 export function defRoutes(routes) {
+    var def = null
     routes.forEach(route => {
         const tmp = { ...route }
         if (tmp.default) {
-            return tmp
+            def = tmp
+            return
         }
     })
-    return null
+    return def
 }
 
 

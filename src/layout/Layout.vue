@@ -56,6 +56,9 @@ export default {
             'currtagroute',
         ]),
     },
+    data: () => ({
+        drawerRight: false,
+    }),
 }
 </script>
 

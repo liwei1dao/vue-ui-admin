@@ -1,5 +1,5 @@
 const getters = {
-    appName: state => state.app.appName,
+    appname: state => state.app.appname,
     currlanguage: state => state.app.currlanguage,
     routes: state => state.router.routes,
     currtagroute : state => state.router.currtagroute,

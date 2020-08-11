@@ -11,16 +11,20 @@ export const constantRoutes = [
         hiding:true,
         component: LayoutN,
         redirect: 'base/login',
+        meta: {
+          title: 'Base',
+          icon: 'mdi-beer',
+        },
         children: [
           {
               path: 'base/login',
               component: () => import('@/views/base/login.vue'),
-              meta: {title: 'Login', icon: 'mdi-home-floor-b'},
+              meta: {title: 'Login', icon: 'mdi-beer'},
           },
           {
               path: 'base/register',
               component: () => import('@/views/base/register.vue'),
-              meta: {title: 'Register', icon: 'mdi-details'},
+              meta: {title: 'Register', icon: 'mdi-beer-outline'},
           }
         ]
     },
@@ -29,11 +33,15 @@ export const constantRoutes = [
         default:true,
         component: Layout,
         redirect: 'dashboard/index',
+        meta: {
+          title: 'Dashboard',
+          icon: 'mdi-home-floor-b',
+        },
         children: [
           {
               path: 'index',
               component: () => import('@/views/dashboard/index.vue'),
-              meta: {title: 'Dashboard', icon: 'mdi-home-floor-b'},
+              meta: {title: 'Dashboard', icon: 'mdi-podium-silver'},
           }
         ]
     }
