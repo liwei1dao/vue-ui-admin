@@ -1,0 +1,12 @@
+{
+    "common": {
+      "login":"Login",
+      "register":"Register",
+      "InputEamil":"please enter eamil",
+      "InputPassword":"please enter password",
+      "InputConfirmPassword":"confirm password",
+      "Verification":"Verification",
+      "VerificationR":"Again Verification",
+      "InputVerification":"please enter verification code"
+    }
+}

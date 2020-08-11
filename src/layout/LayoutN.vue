@@ -18,7 +18,9 @@
                         sm="8"
                         md="4"
                     >
+                    <transition name="fade-transform" mode="out-in">
                         <router-view></router-view>
+                    </transition>
                     </v-col>
                 </v-row>
             </v-container>
@@ -41,5 +43,20 @@ export default {
     .topbar{
         width: 100%;
         padding: 10px;
+    }
+    /* fade-transform */
+    .fade-transform-leave-active,
+    .fade-transform-enter-active {
+        transition: all .5s;
+    }
+
+    .fade-transform-enter {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+
+    .fade-transform-leave-to {
+        opacity: 0;
+        transform: translateX(30px);
     }
 </style>

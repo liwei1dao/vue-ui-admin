@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 
 Vue.use(Router)
+import Layout from '@/layout/Layout'
 import LayoutN from '@/layout/LayoutN'
 
 export const constantRoutes = [
@@ -21,8 +22,21 @@ export const constantRoutes = [
               component: () => import('@/views/base/register.vue'),
               meta: {title: 'Register', icon: 'mdi-details'},
           }
-      ]
+        ]
     },
+    {
+        path: '/dashboard',
+        default:true,
+        component: Layout,
+        redirect: 'dashboard/index',
+        children: [
+          {
+              path: 'index',
+              component: () => import('@/views/dashboard/index.vue'),
+              meta: {title: 'Dashboard', icon: 'mdi-home-floor-b'},
+          }
+        ]
+    }
 ]
 
 const createRouter = () => new Router({

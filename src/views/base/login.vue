@@ -7,30 +7,36 @@
         dark
         flat
         >
-            <v-toolbar-title>Login</v-toolbar-title>
+            <v-toolbar-title>{{$t('common.login')}}</v-toolbar-title>
         </v-toolbar>
         <v-card-text>
             <v-form>
-               <v-text-field
-                    v-model="form.email"
-                    prepend-icon="mdi-email"
-                    clearable
-                    required
-                ></v-text-field>
-                <v-text-field
-                    v-model="form.password"
-                    prepend-icon="mdi-lock-question"
-                    :append-icon="showPwd ? 'mdi-eye-off' : 'mdi-eye'"
-                    :type="showPwd ? 'text' : 'password'"
-                    @click:append="showPwd = !showPwd"
-                    required
-                ></v-text-field>
+                <v-row justify="center">
+                   <v-col cols="10">
+                        <v-text-field
+                            v-model="form.email"
+                            prepend-icon="mdi-email"
+                            clearable
+                            required
+                        ></v-text-field>
+                   </v-col>
+                    <v-col cols="10">
+                        <v-text-field
+                            v-model="form.password"
+                            prepend-icon="mdi-lock-question"
+                            :append-icon="showPwd ? 'mdi-eye-off' : 'mdi-eye'"
+                            :type="showPwd ? 'text' : 'password'"
+                            @click:append="showPwd = !showPwd"
+                            required
+                        ></v-text-field>
+                    </v-col>
+                </v-row>
             </v-form>
         </v-card-text>
         <v-card-actions>
             <v-spacer></v-spacer>
-            <v-btn color="blue-grey">{{$t('common.login')}}</v-btn>
-            <v-btn color="primary">{{$t('common.login')}}</v-btn>
+            <v-btn color="grey" to="/base/register" >{{$t('common.register')}}</v-btn>
+            <v-btn color="primary" @click="handle_login">{{$t('common.login')}}</v-btn>
         </v-card-actions>
     </v-card>
 </template>
@@ -49,6 +55,15 @@ export default {
                 email:"",
                 password:"",
             }
+        }
+    },
+    omputed: {
+
+    },
+    methods:{
+        handle_login(){
+            console.log("测试国际化脚本代码:",this.$t('common.login'))
+            this.$router.push({ path:'/dashboard' })
         }
     }
 }

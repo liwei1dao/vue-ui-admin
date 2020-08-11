@@ -1,16 +1,14 @@
 <template>
     <v-menu offset-y transition="scroll-x-transition">
       <template v-slot:activator="{ on, attrs }">
-        <v-btn
-          fab
-          color="#E0E0E0"
-          width="48px"
-          height="48px"
-          v-bind="attrs"
-          v-on="on"
-        >
-          <span class="slang-icon" :class="flagIconClass(currlanguage,true)"></span>
-        </v-btn>
+        <div class="menu-butt">
+            <img
+                class="slang-icon"
+                :class="flagIconClass(currlanguage,true)"
+                v-bind="attrs"
+                v-on="on"
+            >
+        </div>
       </template>
       <v-card>
         <v-toolbar
@@ -41,7 +39,6 @@ export default {
     name:"SelectLanguge",
     components:{
     },
-
     computed: {
       ...mapGetters([
         'currlanguage',
@@ -64,12 +61,19 @@ export default {
       },
       selectlanguge:function(item){
         this.$store.dispatch('app/setcurrlanguage', item.lang)
+        this.$i18n.locale = item.lang
       }
     }
 }
 </script>
 
 <style>
+    .menu-butt{
+        background-color:"#E0E0E0";
+        width: 48px;
+        height: 48px;
+        padding-right: 8px;
+    }
     .slang-icon{
         width: 40px;
         height: 40px;

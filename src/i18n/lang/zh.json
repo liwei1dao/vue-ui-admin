@@ -1,0 +1,12 @@
+{
+  "common": {
+    "login":"登录",
+    "register":"注册",
+    "InputEamil":"请输入邮箱",
+    "InputPassword":"请输入密码",
+    "InputConfirmPassword":"确认密码",
+    "Verification":"验证码",
+    "VerificationR":"重新获取验证码",
+    "InputVerification":"请输入验证码"
+  }
+}

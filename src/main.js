@@ -7,11 +7,10 @@ import router from './router'
 import '@/styles/index.scss'
 
 Vue.config.productionTip = false
-
 new Vue({
-  i18n,
   vuetify,
   store,
+  i18n,
   router,
   render: h => h(App)
 }).$mount('#app')
