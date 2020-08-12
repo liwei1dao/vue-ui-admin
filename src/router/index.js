@@ -34,7 +34,7 @@ export const constantRoutes = [
         component: Layout,
         redirect: 'dashboard/index',
         meta: {
-          title: 'Dashboard',
+          title: 'router.dashboard',
           icon: 'mdi-home-floor-b',
         },
         children: [

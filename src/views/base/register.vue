@@ -4,7 +4,6 @@
     >
         <v-toolbar
         color="primary"
-        dark
         flat
         >
             <v-toolbar-title>{{$t('common.register')}}</v-toolbar-title>
@@ -17,8 +16,6 @@
                             v-model="form.email"
                             prepend-icon="mdi-email"
                             :label="$t('common.InputEamil')"
-                            clearable
-                            required
                         ></v-text-field>
                     </v-col>
                     <v-col cols="10" align-self>

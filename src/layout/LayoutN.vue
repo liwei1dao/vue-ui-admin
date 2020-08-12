@@ -4,6 +4,7 @@
             <v-row justify="start" class="topbar">
                 <v-spacer></v-spacer>
                 <SelectLanguge/>
+                <Settings/>
             </v-row>
             <v-container
             class="fill-height"
@@ -29,12 +30,13 @@
 </template>
 
 <script>
-import {SelectLanguge} from "./components"
+import {SelectLanguge,Settings} from "./components"
 
 export default {
     name:"LayoutN",
     components:{
-        SelectLanguge
+        SelectLanguge,
+        Settings,
     }
 }
 </script>

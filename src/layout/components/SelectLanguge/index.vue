@@ -9,15 +9,13 @@
               v-on="on"
           >
       </template>
-      <v-card>
-        <v-toolbar
-          color="primary"
-          dark
-          flat
-          height="35px"
-          >
-            <v-toolbar-title>Select Languge</v-toolbar-title>
-        </v-toolbar>
+      <v-card
+        width="240px"
+      >
+        <div class="slang-title">
+          <div class="slang-title-bg"></div>
+          <div class="slang-title-text">{{$t('common.SelectLang')}}</div>
+        </div>
         <v-list>
           <v-list-item v-for="(item,index) in languge" :key="index" link
             @click="selectlanguge(item)"
@@ -69,13 +67,39 @@ export default {
 
 <style lang="scss" scoped>
     .menu-butt{
-        width: 60px;
+        width: 54px;
         height: 48px;
+        display: flex;
+        align-items: center;
     }
     .slang-icon{
-        width: 48px;
-        height: 48px;
+        width: 46px;
+        height: 46px;
         border-radius:100%;
         border:6px solid #BDBDBD;
     }
+    .slang-title{
+        width: 100%;
+        height: 67px;
+        background-color: #444054;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .slang-title-bg{
+        width: 100%;
+        height: 67px;
+        opacity: .05;
+        background-image: url(~@/assets/media/city2.456b47bc.jpg);
+        position: absolute;
+        z-index: 8;
+    }
+    .slang-title-text{
+        position: absolute;
+        z-index: 10;
+        text-align: center;
+        color: #fff;
+    }
+  
+
 </style>

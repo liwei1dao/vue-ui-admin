@@ -18,12 +18,16 @@
         <v-spacer>
             <TopNavigation :routes="routes"></TopNavigation>
         </v-spacer>
-        <AvatarMenu></AvatarMenu>
         <SelectLanguge></SelectLanguge>
+        <Settings></Settings>
+        <AvatarMenu></AvatarMenu>
         <v-app-bar-nav-icon v-if="currtagroute" @click.stop="drawerRight = !drawerRight"></v-app-bar-nav-icon>
         </v-app-bar>
 
         <v-main>
+            <div class="subtitle">
+                <Breadcrumbs></Breadcrumbs>
+            </div>
             <v-container>
             <router-view></router-view>
             </v-container>
@@ -39,7 +43,7 @@
 </template>
 
 <script>
-import {TopNavigation,ViceNavigation,AvatarMenu,SelectLanguge} from "./components"
+import {TopNavigation,ViceNavigation,AvatarMenu,SelectLanguge,Settings,Breadcrumbs} from "./components"
 import { mapGetters } from 'vuex'
 export default {
     name:"Layout",
@@ -48,6 +52,8 @@ export default {
         ViceNavigation,
         AvatarMenu,
         SelectLanguge,
+        Settings,
+        Breadcrumbs,
     },
     computed: {
         ...mapGetters([
@@ -62,6 +68,10 @@ export default {
 }
 </script>
 
-<style>
-
+<style lang="scss" scoped>
+    .subtitle{
+        width: 100%;
+        height: 50px;
+        background-color: #EEEEEE;
+    }
 </style>

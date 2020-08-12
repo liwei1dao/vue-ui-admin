@@ -1,20 +1,28 @@
-import Cookies from 'js-cookie'
+import { getLanguge, setLanguge ,getDark,setDark} from '@/utils/auth'
 
 const state = {
     appname:"Lego",
-    currlanguage:Cookies.get('language')||'zh',
+    currlanguage:getLanguge()||'zh',
+    dark:getDark()||false,
 }
  
  const mutations = {
     Set_currlanguage: (state,lang) => {
         state.currlanguage = lang
-        Cookies.set('language',lang)
+        setLanguge(lang)
+    },
+    Set_currdark: (state,dark) => {
+        state.dark = dark
+        setDark(dark)
     },
  }
  
  const actions = {
     setcurrlanguage({ commit }, lang) {
         commit('Set_currlanguage',lang)
+    },
+    setcurrdark({ commit }, dark) {
+        commit('Set_currdark',dark)
     }
  }
  

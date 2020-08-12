@@ -4,7 +4,6 @@
     >
         <v-toolbar
         color="primary"
-        dark
         flat
         >
             <v-toolbar-title>{{$t('common.login')}}</v-toolbar-title>
@@ -17,7 +16,6 @@
                             v-model="form.email"
                             prepend-icon="mdi-email"
                             clearable
-                            required
                         ></v-text-field>
                    </v-col>
                     <v-col cols="10">

@@ -7,6 +7,14 @@
       "InputConfirmPassword":"confirm password",
       "Verification":"Verification",
       "VerificationR":"Again Verification",
-      "InputVerification":"please enter verification code"
+      "InputVerification":"please enter verification code",
+      "SelectLang":"Choose a language",
+      "LoginOut":"Login Out",
+      "Setting":"Setting",
+      "SysSetting":"System settings",
+      "SysSetting-Dark":"Dark"
+    },
+    "router": {
+      "dashboard":"Dashboard"
     }
 }
