@@ -25,9 +25,11 @@
         </v-app-bar>
 
         <v-main>
-            <div class="subtitle">
+            <v-toolbar elevation="0">
                 <Breadcrumbs></Breadcrumbs>
-            </div>
+                <v-spacer></v-spacer>
+                <SearchBar></SearchBar>
+            </v-toolbar>
             <v-container>
             <router-view></router-view>
             </v-container>
@@ -43,7 +45,7 @@
 </template>
 
 <script>
-import {TopNavigation,ViceNavigation,AvatarMenu,SelectLanguge,Settings,Breadcrumbs} from "./components"
+import {TopNavigation,ViceNavigation,AvatarMenu,SelectLanguge,Settings,Breadcrumbs,SearchBar} from "./components"
 import { mapGetters } from 'vuex'
 export default {
     name:"Layout",
@@ -54,6 +56,7 @@ export default {
         SelectLanguge,
         Settings,
         Breadcrumbs,
+        SearchBar,
     },
     computed: {
         ...mapGetters([
@@ -71,7 +74,7 @@ export default {
 <style lang="scss" scoped>
     .subtitle{
         width: 100%;
-        height: 50px;
+        height: 54px;
         background-color: #EEEEEE;
     }
 </style>

@@ -33,6 +33,6 @@ export default {
 
 <style lang="scss" scoped>
     .breadcrumbs{
-        height: 35px;
+        height: 46px;
     }
 </style>
