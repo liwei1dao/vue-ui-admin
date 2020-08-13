@@ -4,6 +4,7 @@ import i18n from './i18n';
 import vuetify from './plugins/vuetify';
 import store from './store'
 import router from './router'
+import '@/components/base.js'
 import '@/styles/index.scss'
 
 Vue.config.productionTip = false
