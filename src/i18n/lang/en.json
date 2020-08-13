@@ -12,9 +12,11 @@
       "LoginOut":"Login Out",
       "Setting":"Setting",
       "SysSetting":"System settings",
-      "SysSetting-Dark":"Dark"
+      "SysSetting-Dark":"Dark",
+      "SearchBar-Input":"please enter"
     },
     "router": {
-      "dashboard":"Dashboard"
+      "dashboard":"Dashboard",
+      "dashboard-index":"Analytics Dashboard"
     }
 }

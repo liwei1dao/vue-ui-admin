@@ -41,7 +41,7 @@ export const constantRoutes = [
           {
               path: 'index',
               component: () => import('@/views/dashboard/index.vue'),
-              meta: {title: 'Dashboard', icon: 'mdi-podium-silver'},
+              meta: {title: 'router.dashboard-index', icon: 'mdi-podium-silver'},
           }
         ]
     }

@@ -2,8 +2,8 @@ import { getLanguge, setLanguge ,getDark,setDark} from '@/utils/auth'
 
 const state = {
     appname:"Lego",
-    currlanguage:getLanguge()||'zh',
-    dark:getDark()||false,
+    currlanguage: getLanguge() ? getLanguge()  :'zh',
+    dark: (getDark() == "true") ? true : false,
 }
  
  const mutations = {

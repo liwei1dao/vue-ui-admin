@@ -12,9 +12,11 @@
     "LoginOut":"登出",
     "Setting":"设置",
     "SysSetting":"系统设置",
-    "SysSetting-Dark":"深色"
+    "SysSetting-Dark":"深色",
+    "SearchBar-Input":"请输入"
   },
   "router": {
-    "dashboard":"仪表盘"
+    "dashboard":"仪表盘",
+    "dashboard-index":"资讯主页"
   }
 }

@@ -25,7 +25,10 @@
         </v-app-bar>
 
         <v-main>
-            <v-toolbar elevation="0">
+            <v-toolbar 
+                primary
+                elevation="0"
+            >
                 <Breadcrumbs></Breadcrumbs>
                 <v-spacer></v-spacer>
                 <SearchBar></SearchBar>

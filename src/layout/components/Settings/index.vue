@@ -44,7 +44,7 @@ export default {
     name:"Settings",
     computed: {
         ...mapGetters([
-        'dark',
+            'dark',
         ]),
     },
     data() {
