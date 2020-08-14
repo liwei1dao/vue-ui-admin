@@ -9,7 +9,7 @@
                 dense
             ></v-text-field>
         </div>
-        <v-btn class="mx-2" fab small @click="searchbarClick">
+        <v-btn class="mx-2 searchbarbutt" fab small @click="searchbarClick">
             <v-icon dark>mdi-magnify</v-icon>
         </v-btn>
     </div>
@@ -34,19 +34,25 @@ export default {
 
 <style lang="scss" scoped>
     .searchbar{
-        line-height: 45px;
+        height: 50px;
+        line-height: 40px;
         display: flex;
         align-items: center;
         justify-content: center;
     }
+    .searchbarbutt{
+        right: 20px;
+    }
     .searchbarinput{
         height: 30px;
         width: 0px;
-        margin-right: -10px;
+        opacity: 0;
+        margin-right: 0px;
         transition: width 0.3s;
     }
     .searchbarinput-show{
         height: 30px;
         width: 236px;
+        opacity:1;
     }
 </style>

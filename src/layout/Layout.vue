@@ -25,14 +25,11 @@
         </v-app-bar>
 
         <v-main>
-            <v-toolbar 
-                primary
-                elevation="0"
-            >
+            <v-row>
                 <Breadcrumbs></Breadcrumbs>
                 <v-spacer></v-spacer>
                 <SearchBar></SearchBar>
-            </v-toolbar>
+            </v-row>
             <v-container>
             <router-view></router-view>
             </v-container>
