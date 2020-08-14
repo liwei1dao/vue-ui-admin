@@ -17,6 +17,7 @@
   },
   "router": {
     "dashboard":"仪表盘",
-    "dashboard-index":"资讯主页"
+    "dashboard-index":"资讯主页",
+    "dashboard-userprofile":"用户资料"
   }
 }

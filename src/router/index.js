@@ -42,6 +42,11 @@ export const constantRoutes = [
               path: 'index',
               component: () => import('@/views/dashboard/index.vue'),
               meta: {title: 'router.dashboard-index', icon: 'mdi-podium-silver'},
+          },
+          {
+              path: 'userprofile',
+              component: () => import('@/views/dashboard/userprofile.vue'),
+              meta: {title: 'router.dashboard-userprofile', icon: 'mdi-account'},
           }
         ]
     }

@@ -17,6 +17,7 @@
     },
     "router": {
       "dashboard":"Dashboard",
-      "dashboard-index":"Analytics Dashboard"
+      "dashboard-index":"Analytics Dashboard",
+      "dashboard-userprofile":"User Profile"
     }
 }

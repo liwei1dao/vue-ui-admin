@@ -31,7 +31,9 @@
                 <SearchBar></SearchBar>
             </v-row>
             <v-container>
-            <router-view></router-view>
+                <transition name="fade-transform" mode="out-in">
+                    <router-view></router-view>
+                </transition>
             </v-container>
         </v-main>
         <v-footer
