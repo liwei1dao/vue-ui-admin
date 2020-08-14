@@ -18,6 +18,9 @@
   "router": {
     "dashboard":"仪表盘",
     "dashboard-index":"资讯主页",
-    "dashboard-userprofile":"用户资料"
+    "dashboard-userprofile":"用户资料",
+    "dashboard-googlemaps":"谷歌地图",
+    "dashboard-regulartables":"常规表格",
+    "dashboard-echarts":"图标"
   }
 }

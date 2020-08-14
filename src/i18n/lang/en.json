@@ -18,6 +18,9 @@
     "router": {
       "dashboard":"Dashboard",
       "dashboard-index":"Analytics Dashboard",
-      "dashboard-userprofile":"User Profile"
+      "dashboard-userprofile":"User Profile",
+      "dashboard-googlemaps":"GoogleMaps",
+      "dashboard-regulartables":"Regular Tables",
+      "dashboard-echarts":"Echarts"
     }
 }

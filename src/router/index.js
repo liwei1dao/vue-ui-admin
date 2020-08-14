@@ -47,6 +47,21 @@ export const constantRoutes = [
               path: 'userprofile',
               component: () => import('@/views/dashboard/userprofile.vue'),
               meta: {title: 'router.dashboard-userprofile', icon: 'mdi-account'},
+          },
+          {
+              path: 'googlemaps',
+              component: () => import('@/views/dashboard/googlemaps.vue'),
+              meta: {title: 'router.dashboard-googlemaps', icon: 'mdi-map-marker-radius'},
+          },
+          {
+              path: 'regulartables',
+              component: () => import('@/views/dashboard/regulartables.vue'),
+              meta: {title: 'router.dashboard-regulartables', icon: 'mdi-table'},
+          },
+          {
+            path: 'echarts',
+            component: () => import('@/views/dashboard/echarts.vue'),
+            meta: {title: 'router.dashboard-echarts', icon: 'mdi-chart-sankey'},
           }
         ]
     }
