@@ -20,7 +20,10 @@ export default {
     },
     watch: {
         $route(route) {
-            console.log("path:",route.path)
+            if (route.path.startsWith('/base')) {
+                return
+            }
+            this.getBreadcrumb()
         }
     },
     created() {

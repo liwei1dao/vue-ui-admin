@@ -1,7 +1,5 @@
 <template>
-    <v-card 
-        class="elevation-12"
-    >
+    <v-card >
         <v-toolbar
         color="primary"
         flat
