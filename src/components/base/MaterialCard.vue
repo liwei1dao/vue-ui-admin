@@ -135,6 +135,9 @@
 
 <style lang="sass">
   .v-card--material
+    border-radius: 6px
+    margin-top: 30px
+    margin-bottom: 15px
     &__avatar
       position: relative
       top: -64px
