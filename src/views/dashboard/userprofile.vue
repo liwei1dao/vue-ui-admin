@@ -25,6 +25,7 @@
               color="success"
               rounded
               class="mr-0"
+              @click="showmessage"
             >
               Follow
             </v-btn>
@@ -37,6 +38,11 @@
 <script>
 export default {
   name:"UserProfile",
+  methods:{
+    showmessage(){
+      this.$message.success(`success这是一条消息`)
+    }
+  }
 }
 </script>
 

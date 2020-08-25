@@ -5,6 +5,7 @@ import vuetify from './plugins/vuetify';
 
 import store from './store'
 import router from './router'
+import '@/components/index.js'
 import '@/components/base.js'
 import '@/plugins/chartist.js'
 import '@/plugins/vee-validate.js'
