@@ -1,9 +1,13 @@
 <template>
 <div class="icons-container">
+    <aside>
+        <a href="https://panjiachen.github.io/vue-element-admin-site/guide/advanced/icon.html" target="_blank">Add and use
+        </a>
+    </aside>
     <v-row>
         <v-col v-for="item of svgIcons" :key="item" cols="1">
             <div @click="handleClipboard(generateIconCode(item),$event)">
-                <v-tooltip>
+                <v-tooltip top>
                     <template v-slot:activator="{ on, attrs }">
                         <div v-bind="attrs" v-on="on" class="icon-item">
                             <svg-icon :icon-class="item" class-name="disabled" />
