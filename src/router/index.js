@@ -64,6 +64,23 @@ export const constantRoutes = [
             meta: {title: 'router.dashboard-echarts', icon: 'mdi-chart-sankey'},
           }
         ]
+    },
+    {
+      path: '/plugins',
+      default:true,
+      component: Layout,
+      redirect: 'plugins/icons',
+      meta: {
+        title: 'router.plugins',
+        icon: 'mdi-home-floor-b',
+      },
+      children: [
+        {
+          path: 'icons',
+          component: () => import('@/views/plugins/icons'),
+          meta: {title: 'router.dashboard-echarts', icon: 'mdi-chart-sankey'},
+        }
+      ]
     }
 ]
 
