@@ -70,7 +70,7 @@ export default {
                     message
                 } = response
                 this.$message({
-                    message: 'successfully',
+                    message: message,
                     type: 'success',
                     duration: 1500
                 })
@@ -92,7 +92,7 @@ export default {
                 }
             }).catch(error => {
                 this.$message({
-                    message: res.message,
+                    message: error.message,
                     type: 'error',
                     duration: 5 * 1000
                 })
