@@ -1,46 +1,67 @@
 <template>
 <div class="icons-container">
-    <aside>
-        <a href="https://panjiachen.github.io/vue-element-admin-site/guide/advanced/icon.html" target="_blank">Add and use
-        </a>
-    </aside>
-    <v-row>
-        <v-col v-for="item of svgIcons" :key="item" cols="1">
-            <div @click="handleClipboard(generateIconCode(item),$event)">
-                <v-tooltip top>
-                    <template v-slot:activator="{ on, attrs }">
-                        <div v-bind="attrs" v-on="on" class="icon-item">
-                            <svg-icon :icon-class="item" class-name="disabled" />
-                            <span>{{ item }}</span>
+    <v-card>
+        <v-tabs background-color="#E0E0E0">
+            <v-tab>Icons</v-tab>
+            <v-tab>Material-Design-Icons</v-tab>
+            <v-tab-item>
+                <v-row>
+                    <v-col v-for="item of svgIcons" :key="item" cols="1">
+                        <div @click="handleClipboard(generateIconCode(item),$event)">
+                            <v-tooltip top>
+                                <template v-slot:activator="{ on, attrs }">
+                                    <div v-bind="attrs" v-on="on" class="icon-item">
+                                        <svg-icon :icon-class="item" class-name="disabled" />
+                                        <span>{{ item }}</span>
+                                    </div>
+                                </template>
+                                <span>{{generateIconCode(item)}}</span>
+                            </v-tooltip>
                         </div>
-                    </template>
-                    <span>{{generateIconCode(item)}}</span>
-                </v-tooltip>
-            </div>
-        </v-col>
-    </v-row>
+                    </v-col>
+                </v-row>
+            </v-tab-item>
+            <v-tab-item>
+                <v-row>
+                    <v-col v-for="item of material_design_Icons" :key="item" cols="1">
+                        <div @click="handleClipboard(generateMaterialDesignIconsCode(item),$event)">
+                            <v-tooltip top>
+                                <template v-slot:activator="{ on, attrs }">
+                                    <div v-bind="attrs" v-on="on" class="icon-item">
+                                        <v-icon large>mdi-{{item}}</v-icon>
+                                        <span>{{ item }}</span>
+                                    </div>
+                                </template>
+                                <span>{{generateMaterialDesignIconsCode(item)}}</span>
+                            </v-tooltip>
+                        </div>
+                    </v-col>
+                </v-row>
+            </v-tab-item>
+        </v-tabs>
+    </v-card>
 </div>
 </template>
 
 <script>
 import clipboard from '@/utils/clipboard'
 import svgIcons from './svg-icons'
-import Icons from './icons'
+import material_design_Icons from './material-design-Icons'
 
 export default {
     name: 'Icons',
     data() {
         return {
             svgIcons,
-            Icons
+            material_design_Icons
         }
     },
     methods: {
         generateIconCode(symbol) {
             return `<svg-icon icon-class="${symbol}" />`
         },
-        generateElementIconCode(symbol) {
-            return `<i class="el-icon-${symbol}" />`
+        generateMaterialDesignIconsCode(symbol) {
+            return `<v-icon large>mdi-${symbol}</v-icon>`
         },
         handleClipboard(text, event) {
             clipboard(text, event)

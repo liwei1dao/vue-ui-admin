@@ -79,7 +79,12 @@ export const constantRoutes = [
           path: 'icons',
           component: () => import('@/views/plugins/icons'),
           meta: {title: 'router.dashboard-echarts', icon: 'mdi-chart-sankey'},
-        }
+        },
+        {
+          path: 'message',
+          component: () => import('@/views/plugins/message'),
+          meta: {title: 'router.dashboard-echarts', icon: 'mdi-chart-sankey'},
+        },
       ]
     }
 ]
