@@ -25,6 +25,7 @@
       "plugins":"Plugins",
       "plugins-icon":"Icon",
       "plugins-message":"Message",
+      "plugins-divider":"Divider",
       "user":"User",
       "user-index":"Profile"
     }

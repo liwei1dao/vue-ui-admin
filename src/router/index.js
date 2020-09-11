@@ -85,6 +85,12 @@ export const constantRoutes = [
           component: () => import('@/views/plugins/message'),
           meta: {title: 'router.plugins-message', icon: 'message'},
         },
+        {
+          path: 'divider',
+          component: () => import('@/views/plugins/divider'),
+          meta: {title: 'router.plugins-divider', icon: 'divider'},
+        },
+        
       ]
     },
     {

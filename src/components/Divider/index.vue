@@ -10,7 +10,7 @@
 import { oneOf } from "@/utils";
 const prefixCls = "xch-divider";
 export default {
-  name: "VDivider",
+  name: "divider",
   props: {
     type: {
       type: String,

@@ -49,7 +49,6 @@ import svgIcons from './svg-icons'
 import material_design_Icons from './material-design-Icons'
 
 export default {
-    name: 'Icons',
     data() {
         return {
             svgIcons,
