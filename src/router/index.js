@@ -35,33 +35,33 @@ export const constantRoutes = [
         redirect: 'dashboard/index',
         meta: {
           title: 'router.dashboard',
-          icon: 'mdi-home-floor-b',
+          icon: 'chart',
         },
         children: [
           {
               path: 'index',
               component: () => import('@/views/dashboard/index.vue'),
-              meta: {title: 'router.dashboard-index', icon: 'mdi-podium-silver'},
+              meta: {title: 'router.dashboard-index', icon: 'clipboard'},
           },
           {
               path: 'userprofile',
               component: () => import('@/views/dashboard/userprofile.vue'),
-              meta: {title: 'router.dashboard-userprofile', icon: 'mdi-account'},
+              meta: {title: 'router.dashboard-userprofile', icon: 'peoples'},
           },
           {
               path: 'googlemaps',
               component: () => import('@/views/dashboard/googlemaps.vue'),
-              meta: {title: 'router.dashboard-googlemaps', icon: 'mdi-map-marker-radius'},
+              meta: {title: 'router.dashboard-googlemaps', icon: 'map-marker'},
           },
           {
               path: 'regulartables',
               component: () => import('@/views/dashboard/regulartables.vue'),
-              meta: {title: 'router.dashboard-regulartables', icon: 'mdi-table'},
+              meta: {title: 'router.dashboard-regulartables', icon: 'table'},
           },
           {
             path: 'echarts',
             component: () => import('@/views/dashboard/echarts.vue'),
-            meta: {title: 'router.dashboard-echarts', icon: 'mdi-chart-sankey'},
+            meta: {title: 'router.dashboard-echarts', icon: 'chart'},
           }
         ]
     },
@@ -72,18 +72,35 @@ export const constantRoutes = [
       redirect: 'plugins/icons',
       meta: {
         title: 'router.plugins',
-        icon: 'mdi-home-floor-b',
+        icon: 'component',
       },
       children: [
         {
           path: 'icons',
           component: () => import('@/views/plugins/icons'),
-          meta: {title: 'router.dashboard-echarts', icon: 'mdi-chart-sankey'},
+          meta: {title: 'router.plugins-icon', icon: 'icon'},
         },
         {
           path: 'message',
           component: () => import('@/views/plugins/message'),
-          meta: {title: 'router.dashboard-echarts', icon: 'mdi-chart-sankey'},
+          meta: {title: 'router.plugins-message', icon: 'message'},
+        },
+      ]
+    },
+    {
+      path: '/user',
+      default:true,
+      component: Layout,
+      redirect: 'user/index',
+      meta: {
+        title: 'router.user',
+        icon: 'peoples',
+      },
+      children: [
+        {
+          path: 'index',
+          component: () => import('@/views/user/index'),
+          meta: {title: 'router.user-index', icon: 'peoples'},
         },
       ]
     }

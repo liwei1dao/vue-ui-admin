@@ -1,8 +1,8 @@
 <template>
-<div v-if="isExternal" :style="styleExternalIcon" class="svg-external-icon svg-icon" v-on="$listeners" />
-<svg v-else :class="svgClass" aria-hidden="true" v-on="$listeners">
-    <use :xlink:href="iconName" />
-</svg>
+    <div v-if="isExternal" :style="styleExternalIcon" class="svg-external-icon svg-icon" v-on="$listeners" />
+    <svg v-else class="svg-icon" :width="width" :height="height" :color="color" aria-hidden="true" v-on="$listeners">
+        <use :xlink:href="iconName" />
+    </svg>
 </template>
 
 <script>
@@ -16,9 +16,17 @@ export default {
             type: String,
             required: true
         },
-        className: {
-            type: String,
-            default: ''
+        width :{
+           type: [Number, String],
+            default: "1em"
+        },
+        height :{
+            type: [Number, String],
+            default: "1em"
+        },
+        color:{
+            type: [String],
+            default: 'currentColor'
         }
     },
     computed: {
@@ -27,13 +35,6 @@ export default {
         },
         iconName() {
             return `#icon-${this.iconClass}`
-        },
-        svgClass() {
-            if (this.className) {
-                return 'svg-icon ' + this.className
-            } else {
-                return 'svg-icon'
-            }
         },
         styleExternalIcon() {
             return {
@@ -47,8 +48,8 @@ export default {
 
 <style scoped>
 .svg-icon {
-    width: 1em;
-    height: 1em;
+    /* width: 1em;
+    height: 1em; */
     vertical-align: -0.15em;
     fill: currentColor;
     overflow: hidden;
