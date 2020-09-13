@@ -29,41 +29,26 @@ export const constantRoutes = [
         ]
     },
     {
-        path: '/dashboard',
-        default:true,
-        component: Layout,
-        redirect: 'dashboard/index',
-        meta: {
-          title: 'router.dashboard',
-          icon: 'mdi-home-floor-b',
+      path: '/user',
+      default:true,
+      component: Layout,
+      redirect: 'user/index',
+      meta: {
+        title: 'router.user',
+        icon: 'peoples',
+      },
+      children: [
+        {
+          path: 'index',
+          component: () => import('@/views/user/index'),
+          meta: {title: 'router.user-index', icon: 'peoples'},
         },
-        children: [
-          {
-              path: 'index',
-              component: () => import('@/views/dashboard/index.vue'),
-              meta: {title: 'router.dashboard-index', icon: 'mdi-podium-silver'},
-          },
-          {
-              path: 'userprofile',
-              component: () => import('@/views/dashboard/userprofile.vue'),
-              meta: {title: 'router.dashboard-userprofile', icon: 'mdi-account'},
-          },
-          {
-              path: 'googlemaps',
-              component: () => import('@/views/dashboard/googlemaps.vue'),
-              meta: {title: 'router.dashboard-googlemaps', icon: 'mdi-map-marker-radius'},
-          },
-          {
-              path: 'regulartables',
-              component: () => import('@/views/dashboard/regulartables.vue'),
-              meta: {title: 'router.dashboard-regulartables', icon: 'mdi-table'},
-          },
-          {
-            path: 'echarts',
-            component: () => import('@/views/dashboard/echarts.vue'),
-            meta: {title: 'router.dashboard-echarts', icon: 'mdi-chart-sankey'},
-          }
-        ]
+        {
+          path: 'divider',
+          component: () => import('@/views/plugins/divider'),
+          meta: {title: 'router.dashboard-echarts', icon: 'mdi-chart-sankey'},
+        },
+      ]
     }
 ]
 

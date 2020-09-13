@@ -4,12 +4,13 @@ import i18n from './i18n';
 import vuetify from './plugins/vuetify';
 import store from './store'
 import router from './router'
+
+import './icons' // icon
 import './permission'
 import '@/components/index.js'
-import '@/components/base.js'
 import '@/plugins/chartist.js'
 import '@/plugins/vee-validate.js'
-import '@/styles/overrides.sass'
+import '@/styles/index.sass'
 
 Vue.config.productionTip = false
 new Vue({
