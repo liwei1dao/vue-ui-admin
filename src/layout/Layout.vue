@@ -14,14 +14,20 @@
             clipped-right
             right
         >
-        <v-toolbar-title>{{appname}}</v-toolbar-title>
-        <v-spacer>
+        <div class="topnavigation">
             <TopNavigation :routes="routes"></TopNavigation>
-        </v-spacer>
-        <SelectLanguge></SelectLanguge>
-        <Settings></Settings>
-        <AvatarMenu></AvatarMenu>
-        <v-app-bar-nav-icon v-if="currtagroute" @click.stop="drawerRight = !drawerRight"></v-app-bar-nav-icon>
+        </div>
+
+        <div class="topmenu">
+            <v-toolbar-title style="pointer-events: auto;">{{appname}}</v-toolbar-title>
+            <v-spacer>
+            </v-spacer>
+            <SelectLanguge style="pointer-events: auto;" ></SelectLanguge>
+            <Settings style="pointer-events: auto;"></Settings>
+            <AvatarMenu style="pointer-events: auto;"></AvatarMenu>
+
+            <v-app-bar-nav-icon large style="pointer-events: auto; right:10px" v-if="currtagroute" @click.stop="drawerRight = !drawerRight"></v-app-bar-nav-icon>
+        </div>
         </v-app-bar>
 
         <v-main>
@@ -73,10 +79,21 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-    .subtitle{
-        width: 100%;
-        height: 54px;
-        background-color: #EEEEEE;
-    }
+<style lang="sass" scoped>
+    .subtitle
+        width: 100%
+        height: 54px
+        background-color: #EEEEEE
+    .topnavigation
+        width: 100%
+        position: relative
+        z-index:-100
+        align-items: center
+    .topmenu
+        width: 100%
+        position: absolute
+        z-index:1
+        display: flex
+        pointer-events: none
+
 </style>

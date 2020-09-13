@@ -21,6 +21,12 @@
       "dashboard-userprofile":"User Profile",
       "dashboard-googlemaps":"GoogleMaps",
       "dashboard-regulartables":"Regular Tables",
-      "dashboard-echarts":"Echarts"
+      "dashboard-echarts":"Echarts",
+      "plugins":"Plugins",
+      "plugins-icon":"Icon",
+      "plugins-message":"Message",
+      "plugins-divider":"Divider",
+      "user":"User",
+      "user-index":"Profile"
     }
 }

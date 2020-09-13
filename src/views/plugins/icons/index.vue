@@ -49,7 +49,6 @@ import svgIcons from './svg-icons'
 import material_design_Icons from './material-design-Icons'
 
 export default {
-    name: 'Icons',
     data() {
         return {
             svgIcons,
@@ -58,7 +57,7 @@ export default {
     },
     methods: {
         generateIconCode(symbol) {
-            return `<svg-icon icon-class="${symbol}" />`
+            return `<svgicon icon-class="${symbol}" />`
         },
         generateMaterialDesignIconsCode(symbol) {
             return `<v-icon large>mdi-${symbol}</v-icon>`

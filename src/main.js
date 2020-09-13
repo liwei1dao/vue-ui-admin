@@ -11,7 +11,7 @@ import '@/components/index.js'
 import '@/components/base.js'
 import '@/plugins/chartist.js'
 import '@/plugins/vee-validate.js'
-import '@/styles/overrides.sass'
+import '@/styles/index.sass'
 
 Vue.config.productionTip = false
 new Vue({

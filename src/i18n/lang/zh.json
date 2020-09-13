@@ -21,6 +21,12 @@
     "dashboard-userprofile":"用户资料",
     "dashboard-googlemaps":"谷歌地图",
     "dashboard-regulartables":"常规表格",
-    "dashboard-echarts":"图标"
+    "dashboard-echarts":"图表",
+    "plugins":"插件",
+    "plugins-icon":"图标",
+    "plugins-message":"消息条",
+    "plugins-divider":"线段",
+    "user":"用户",
+    "user-index":"个人资料"
   }
 }

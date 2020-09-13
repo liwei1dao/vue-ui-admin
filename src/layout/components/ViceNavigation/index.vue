@@ -37,7 +37,7 @@
                 link
             >
                 <v-list-item-action>
-                <v-icon>{{item.meta.icon}}</v-icon>
+                <svg-icon large :icon-class="item.meta.icon" width="1em" height="1em" />
                 </v-list-item-action>
                 <v-list-item-content>
                 <v-list-item-title>
