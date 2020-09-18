@@ -16,10 +16,10 @@
 </template>
 
 <script>
-import LineChart from '@/components/LineChart'
-import RaddarChart from '@/components/RaddarChart'
-import PieChart from '@/components/PieChart'
-import BarChart from '@/components/BarChart'
+import LineChart from '@/components/Echarts/LineChart.vue'
+import RaddarChart from '@/components/Echarts/RaddarChart.vue'
+import PieChart from '@/components/Echarts/PieChart.vue'
+import BarChart from '@/components/Echarts/BarChart.vue'
 
 export default {
     name: "Echarts",

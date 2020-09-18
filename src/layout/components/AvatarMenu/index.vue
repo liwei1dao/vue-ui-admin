@@ -73,7 +73,7 @@ export default {
                 })
                 .catch((error) => {
                     this.$message({
-                        message: res.message,
+                        message: error.message,
                         type: 'error',
                         duration: 5 * 1000
                     })
