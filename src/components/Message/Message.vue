@@ -112,7 +112,7 @@ export default {
 };
 </script>
 
-<style>
+<style >
 .message__closeBtn:focus,
 .message__content:focus {
     outline-width: 0
