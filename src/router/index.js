@@ -9,20 +9,20 @@ export const constantRoutes = [
         path: '/',
         hiding:true,
         component: LayoutBack,
-        redirect: 'back/login',
+        redirect: 'base/login',
         meta: {
           title: 'Base',
           icon: 'mdi-beer',
         },
         children: [
           {
-              path: 'back/login',
-              component: () => import('@/views/back/login.vue'),
+              path: 'base/login',
+              component: () => import('@/views/base/login.vue'),
               meta: {title: 'Login', icon: 'mdi-beer'},
           },
           {
               path: 'base/register',
-              component: () => import('@/views/back/register.vue'),
+              component: () => import('@/views/base/register.vue'),
               meta: {title: 'Register', icon: 'mdi-beer-outline'},
           }
         ]
