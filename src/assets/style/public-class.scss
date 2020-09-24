@@ -1,0 +1,7 @@
+@import 'public';
+@import '~@/assets/style/fixed/base.scss';
+
+// 文字相关
+.#{$prefix}-text-center {
+    text-align: center;
+}
