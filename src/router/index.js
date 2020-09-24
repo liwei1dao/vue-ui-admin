@@ -29,8 +29,34 @@ export const constantRoutes = [
         ]
     },
     {
-      path: '/user',
+      path: '/plugins',
       default:true,
+      component: Layout,
+      redirect: 'plugins/icons',
+      meta: {
+        title: 'router.plugins',
+        icon: 'component',
+      },
+      children: [
+        {
+          path: 'icons',
+          component: () => import('@/views/plugins/icons'),
+          meta: {title: 'router.plugins-icons', icon: 'icon'},
+        },
+        {
+          path: 'divider',
+          component: () => import('@/views/plugins/divider'),
+          meta: {title: 'router.plugins-divider', icon: 'divider'},
+        },
+        {
+          path: 'message',
+          component: () => import('@/views/plugins/message'),
+          meta: {title: 'router.plugins-message', icon: 'message'},
+        }
+      ]
+    },
+    {
+      path: '/user',
       component: Layout,
       redirect: 'user/index',
       meta: {
@@ -42,12 +68,7 @@ export const constantRoutes = [
           path: 'index',
           component: () => import('@/views/user/index'),
           meta: {title: 'router.user-index', icon: 'peoples'},
-        },
-        {
-          path: 'divider',
-          component: () => import('@/views/plugins/divider'),
-          meta: {title: 'router.dashboard-echarts', icon: 'mdi-chart-sankey'},
-        },
+        }
       ]
     }
 ]

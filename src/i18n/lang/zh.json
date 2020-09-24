@@ -17,6 +17,10 @@
   },
   "router": {
     "user":"用户",
-    "user-index":"个人资料"
+    "user-index":"个人资料",
+    "plugins":"组件",
+    "plugins-icons":"图标",
+    "plugins-divider":"线段",
+    "plugins-message":"消息"
   }
 }

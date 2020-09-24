@@ -17,6 +17,10 @@
     },
     "router": {
       "user":"User",
-      "user-index":"Profile"
+      "user-index":"Profile",
+      "plugins":"Plugins",
+      "plugins-icons":"Icons",
+      "plugins-divider":"Divider",
+      "plugins-message":"Message"
     }
 }

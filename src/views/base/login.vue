@@ -45,7 +45,7 @@ export default {
         handle_login() {
             console.log("测试国际化脚本代码:", this.$t('common.login'))
             this.$router.push({
-                path: '/dashboard'
+                path: '/plugins'
             })
         }
     }

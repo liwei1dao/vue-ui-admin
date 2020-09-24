@@ -36,7 +36,7 @@ export function defRoutes(routes) {
 
 
 const state = {
-    routes : filterAsyncRoutes(constantRoutes),
+    routes : filterAsyncRoutes(constantRoutes) ,
     currtagroute : defRoutes(constantRoutes),
 }
 

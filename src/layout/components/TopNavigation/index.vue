@@ -2,7 +2,6 @@
 <div>
     <v-tabs v-model="tabchange" background-color="transparent" centered icons-and-text>
         <v-tab v-for="route in routes" :key="route.path">
-            <!-- <svgicon large>{{route.meta.icon}}</svgicon> -->
             <svg-icon :icon-class="route.meta.icon" width="2em" height="2em" />
         </v-tab>
     </v-tabs>
