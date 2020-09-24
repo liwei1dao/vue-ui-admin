@@ -1,5 +1,6 @@
 <template>
    <div class="app-wrapper">
+      <router-view />
    </div>
 </template>
 
@@ -9,7 +10,7 @@ export default {
 }
 </script>
 
-<style lang="sass" scoped>
+<style lang="scss" scoped>
   .app-wrapper {
     position: relative;
     height: 100%;
