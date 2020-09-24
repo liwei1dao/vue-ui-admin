@@ -6,6 +6,9 @@
       </ul>
     </div>
     <div class="layoutback--layer layoutback--layer-time"  flex="main:center cross:center">{{time}} </div>
+    <div class="layoutback--layer">
+        <router-view />
+    </div>
   </div>
 </template>
 
@@ -15,8 +18,22 @@ export default {
   name : "LayoutBack",
   data () {
     return {
+      timeInterval: null,
       time: dayjs().format('HH:mm:ss'),
     }
+  },
+  mounted () {
+    this.timeInterval = setInterval(() => {
+      this.refreshTime()
+    }, 1000)
+  },
+  beforeDestroy () {
+    clearInterval(this.timeInterval)
+  },
+  methods: {
+    refreshTime () {
+      this.time = dayjs().format('HH:mm:ss')
+    },
   }
 }
 </script>
