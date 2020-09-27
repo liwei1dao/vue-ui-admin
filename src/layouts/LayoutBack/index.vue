@@ -6,8 +6,29 @@
       </ul>
     </div>
     <div class="layoutback--layer layoutback--layer-time"  flex="main:center cross:center">{{time}} </div>
-    <div class="layoutback--layer">
-        <router-view />
+    <div class="layoutback--layer layoutback--layer--content" flex="dir:top main:justify cross:stretch box:justify">
+        <div class="layoutback--layer--content-header">
+          <p class="layoutback--layer--content-header-motto">
+            时间是一切财富中最宝贵的财富
+          </p>
+        </div>
+        <router-view class="layoutback--layer--content-main" flex="main:center cross:center" />
+
+        <div class="layoutback--layer--content-footer">
+          <p class="layoutback--layer--content-footer-copyright">
+            Copyright
+            <d2-icon name="copyright"/>
+            2018 D2 Projects 开源组织出品
+            <a href="https://github.com/FairyEver">
+              @FairyEver
+            </a>
+          </p>
+          <p class="layoutback--layer--content-footer-options">
+            <a href="#">帮助</a>
+            <a href="#">隐私</a>
+            <a href="#">条款</a>
+          </p>
+        </div>
     </div>
   </div>
 </template>
@@ -61,6 +82,60 @@ export default {
       color: rgba(0, 0, 0, 0.03);
       overflow: hidden;
     }
+
+    //
+    .layoutback--layer--content{
+        height: 100%;
+        min-height: 500px;
+        // header
+        .layoutback--layer--content-header {
+            padding: 1em 0;
+            .layoutback--layer--content-header-motto {
+              margin: 0px;
+              padding: 0px;
+              color: $color-text-normal;
+              text-align: center;
+              font-size: 12px;
+          }
+        }
+
+        //登陆页面控件的容器
+        .layoutback--layer--content-main{
+            height: 100%;
+            min-height: 500px;
+        }
+
+        // footer
+        .layoutback--layer--content-footer {
+            padding: 1em 0;
+          .layoutback--layer--content-footer-copyright {
+            padding: 0px;
+            margin: 0px;
+            margin-bottom: 10px;
+            font-size: 12px;
+            line-height: 12px;
+            text-align: center;
+            color: $color-text-normal;
+            a {
+                color: $color-text-normal;
+            }
+          }
+          .layoutback--layer--content-footer-options {
+            padding: 0px;
+            margin: 0px;
+            font-size: 12px;
+            line-height: 12px;
+            text-align: center;
+            a {
+                color: $color-text-normal;
+                margin: 0 1em;
+            }
+          }
+        }
+    }
+
+
+
 
     // 背景
     .circles {
