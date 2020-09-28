@@ -3,7 +3,8 @@ import App from './App.vue'
 import i18n from '@/i18n';
 import store from '@/store'
 import router from '@/router'
-import '@/styles/index.scss'
+import vuetify from '@/plugins/vuetify';
+import '@/icons'
 
 Vue.config.productionTip = false
 
@@ -11,5 +12,6 @@ new Vue({
   i18n,
   store,
   router,
-  render: h => h(App),
+  vuetify,
+  render: h => h(App)
 }).$mount('#app')
