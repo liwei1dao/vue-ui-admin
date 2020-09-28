@@ -1,8 +1,7 @@
 import Vue from 'vue'
 import Message from './message/index.js'
-import SvgIcon from './svgicon'
+import SvgIcon from './svgIcon'
 import Divider from './divider'
 
 Vue.prototype.$message = Message 
-Vue.component(`svgicon`, SvgIcon)
 Vue.component(`divider`, Divider)

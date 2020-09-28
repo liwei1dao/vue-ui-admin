@@ -81,64 +81,75 @@ export default {
           min-width: 100%;
           margin: 24px 0;
           clear: both;
-      }
-      &-horizontal&-with-text-center,
-      &-horizontal&-with-text-left,
-      &-horizontal&-with-text-right {
-          display: table;
-          white-space: nowrap;
-          text-align: center;
-          background: transparent;
-          margin: 16px 0;
-          font-size: 16px;
-          &:before,
-          &:after{
-              content: '';
-              display: table-cell;
-              position: relative;
-              top: 50%;
-              width: 50%;
-              border-top: 1px solid #ddd;
-              transform: translateY(50%);
+          &-with-text-center,
+          &-with-text-left,
+          &-with-text-right {
+              display: table;
+              white-space: nowrap;
+              text-align: center;
+              background: transparent;
+              margin: 16px 0;
+              font-size: 16px;
+              &:before,
+              &:after{
+                  content: '';
+                  display: table-cell;
+                  position: relative;
+                  top: 50%;
+                  width: 50%;
+                  border-top: 1px solid #ddd;
+                  transform: translateY(50%);
+              }
           }
-      }
-      
-      &-horizontal&-small&-with-text-center,
-      &-horizontal&-small&-with-text-left,
-      &-horizontal&-small&-with-text-right{
-          margin: 8px 0;
-          font-size: 12px;
-      }
-      &-horizontal&-with-text-left,
-      &-horizontal&-with-text-right {
-          .xch-divider-inner-text {
-              display: inline-block;
-              padding: 0 10px;
+          &-small{
+            &-with-text-center,
+            &-with-text-left,
+            &-with-text-right{
+                margin: 8px 0;
+                font-size: 12px;
+            }
           }
-      }
+          &-with-text-left,
+          &-with-text-right {
+              .xch-divider-inner-text {
+                  display: inline-block;
+                  padding: 0 10px;
+              }
+          }
 
-      &-horizontal&-with-text-left {
-          &:before {
-              top: 50%;
-              width: 5%;
+          &-with-text-left {
+              &:before {
+                  top: 50%;
+                  width: 5%;
+              }
+              &:after {
+                  top: 50%;
+                  width: 95%;
+              }
           }
-          &:after {
-              top: 50%;
-              width: 95%;
+
+          &-with-text-right {
+              &:before {
+                  top: 50%;
+                  width: 95%;
+              }
+              &:after {
+                  top: 50%;
+                  width: 5%;
+              }
+          }
+          &-with-text{
+            &-dashed,
+            &-left-dashed,
+            &-right-dashed {
+                border-top: 0;
+                &:before,
+                &:after {
+                    border-style: dashed none none;
+                }
+            }
           }
       }
-
-      &-horizontal&-with-text-right {
-          &:before {
-              top: 50%;
-              width: 95%;
-          }
-          &:after {
-              top: 50%;
-              width: 5%;
-          }
-      }
-
       &-inner-text {
           display: inline-block;
           padding: 0 24px;
@@ -147,14 +158,6 @@ export default {
           background: none;
           border-top: 1px dashed #ddd;
       }
-      &-horizontal&-with-text&-dashed,
-      &-horizontal&-with-text-left&-dashed,
-      &-horizontal&-with-text-right&-dashed {
-          border-top: 0;
-          &:before,
-          &:after {
-              border-style: dashed none none;
-          }
-      }
+
   }
 </style>
